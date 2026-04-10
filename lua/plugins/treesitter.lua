@@ -1,10 +1,22 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  branch = "main",
   build = ":TSUpdate",
-  main = "nvim-treesitter.configs", -- Sets main module to use for opts
-  -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-  opts = {
-    ensure_installed = {
+  config = function()
+    local ts = require "nvim-treesitter"
+
+    -- 1. Setup highlights and other features
+    ts.setup {
+      highlight = {
+        enable = true,
+        -- This ensures Treesitter takes over from standard Vim syntax
+        additional_vim_regex_highlighting = false,
+      },
+      indent = { enable = true },
+    }
+
+    -- 2. Install your languages
+    ts.install {
       "bash",
       "diff",
       "html",
@@ -25,15 +37,7 @@ return {
       "go",
       "dockerfile",
       "templ",
-      "latex",
       "nix",
-    },
-    -- Autoinstall languages that are not installed
-    auto_install = true,
-    highlight = {
-      enable = true,
-    },
-    indent = { enable = true },
-    fold = { enable = true },
-  },
+    }
+  end,
 }

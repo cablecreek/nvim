@@ -1,15 +1,14 @@
 return {
-  'stevearc/oil.nvim',
+  "stevearc/oil.nvim",
   ---@module 'oil'
   ---@type oil.SetupOpts
   -- Optional dependencies
-  dependencies = { { 'echasnovski/mini.icons', opts = {} } },
-  -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+  dependencies = { { "echasnovski/mini.icons", opts = {} } },
   -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
   lazy = false,
   opts = {
     columns = {
-      'icon',
+      "icon",
       -- 'permissions',
       -- 'size',
       -- 'mtime',
@@ -17,26 +16,26 @@ return {
     -- Buffer-local options to use for oil buffers
     buf_options = {
       buflisted = false,
-      bufhidden = 'hide',
+      bufhidden = "hide",
     },
 
     view_options = {
       show_hidden = true,
     },
     watch_for_changes = true,
-    preview_split = 'auto',
+    preview_split = "auto",
     confirmation = {
-      border = 'rounded',
+      border = "rounded",
       win_options = {
         winblend = 0,
-        winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder',
+        winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder",
       },
     },
     float = {
-      border = 'rounded', -- or "single", "double", etc.
+      border = "rounded", -- or "single", "double", etc.
       win_options = {
         winblend = 0,
-        winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder',
+        winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder",
       },
     },
   },

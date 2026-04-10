@@ -1,5 +1,10 @@
 # nvim config
 
+## TODO
+- [ ] check and refine deps list
+- [ ] keymaps are a mess
+- [ ] tidy gitsigns and different keymaps
+
 ## dependencies:
 git
 curl
@@ -33,5 +38,3 @@ delve             # dap-go (go debugger)
 image-magick      # snacks image
 ghostscript       # snacks PDF/image support
 
-## TODO
-- [ ] check and refine deps list

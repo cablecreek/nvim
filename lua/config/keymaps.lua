@@ -82,16 +82,3 @@ set("x", "<leader>rf", [[y/\V<C-R>=escape(@",'/\')<CR><CR>Ncgn]], { desc = "[s]e
 --- misc
 -------------------------------------------------------------------------------
 set("n", "<leader>u", "<cmd>UndotreeToggle<cr>", { desc = "[u]ndo tree" })
-
--------------------------------------------------------------------------------
---- nvim plugin dev
--------------------------------------------------------------------------------
-
--- source current file
-set("n", "<leader>x", function()
-  vim.cmd "source %"
-end, { desc = "Source current file" })
-
-set("n", "<leader>z", function()
-  vim.cmd "PlenaryBustedFile %"
-end, { desc = "test current file with Plenary" })

@@ -36,7 +36,16 @@ return {
 
     formatters_by_ft = {
       lua = { "stylua" },
-      python = { "black" },
+      go = { "goimports", "gofumpt" },
+      python = { "ruff_format", "ruff_organize_imports" },
+      javascript = { "prettier" },
+      javascriptreact = { "prettier" },
+      typescript = { "prettier" },
+      typescriptreact = { "prettier" },
+      astro = { "prettier" },
+      json = { "prettier" },
+      yaml = { "prettier" },
+      markdown = { "prettier" },
     },
   },
 }

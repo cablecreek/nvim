@@ -40,7 +40,7 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- resize splits
 vim.keymap.set("n", "<C-Left>", ":vertical resize -5<CR>")
 vim.keymap.set("n", "<C-Right>", ":vertical resize +5<CR>")
-vim.keymap.set("n", "<C-Up>", ":resize -5<CR>") -- horizontal shrink
+vim.keymap.set("n", "<C-Up>", ":resize -5<CR>")   -- horizontal shrink
 vim.keymap.set("n", "<C-Down>", ":resize +5<CR>") -- horizontal grow
 
 -- TODO:
@@ -56,7 +56,13 @@ set("n", "<C-k>", "<C-u>zz")
 -------------------------------------------------------------------------------
 --- lsp
 -------------------------------------------------------------------------------
-set("n", "K", vim.lsp.buf.hover)
+set("n", "K", function()
+  vim.lsp.buf.hover {
+    border = "rounded",
+    max_width = math.floor(vim.o.columns * 0.7),
+    max_height = math.floor(vim.o.lines * 0.5),
+  }
+end, { desc = "LSP Hover" })
 
 -------------------------------------------------------------------------------
 --- search and replace

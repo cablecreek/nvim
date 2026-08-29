@@ -11,3 +11,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.hl.on_yank()
   end,
 })
+
+
+-- ensure tree sitter starts
+-- added as a fix for some languages (yaml)
+-- vim.api.nvim_create_automd("FileType", {
+--   pattern = "*",
+--   callback = function()
+--     pcall(vim.treesitter.start)
+--   end,
+-- })

@@ -13,6 +13,8 @@ local servers = {
   "ts_ls",
   "vimls",
   "yamlls",
+  'jinja_lsp',
+
 }
 
 return {

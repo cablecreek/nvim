@@ -38,6 +38,7 @@ return {
       "dockerfile",
       "templ",
       "nix",
+      "jinja"
     }
   end,
 }
